@@ -60,6 +60,7 @@ model Product {
   minimumQuantity Int?
   usage String?
   inStock Boolean @default(true) 
+  createdAt     DateTime  @default(now()) 
 }
 
 
@@ -70,7 +71,7 @@ model Orders {
   Name        String
   Email       String
   Contact String?
-  Address   String[]
+  Address   Json?
   TotalProducts Int
   Amount Decimal
   Tax Decimal?
